@@ -1,9 +1,12 @@
-import { FullscreenWrapper } from "components";
-import useNewDocumentTitle from "hooks/useNewDocumentTitle";
+import { FullscreenWrapper, CustomLink } from "components";
 
 function PageNotFound() {
-  useNewDocumentTitle("404");
-  return <FullscreenWrapper>404 PAGE NOT FOUND</FullscreenWrapper>;
+  return (
+    <FullscreenWrapper>
+      <h1 className="m-bottom-4">404 PAGE NOT FOUND</h1>
+      <CustomLink to="/" label="Go to Home" />
+    </FullscreenWrapper>
+  );
 }
 
 export default PageNotFound;

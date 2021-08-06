@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
-import { Home, Login, PageNotFound } from "pages";
+import { BadComponents, Home, Login, PageNotFound } from "pages";
 
 // Source: https://reactrouter.com/web/guides/quick-start
 
@@ -12,6 +12,9 @@ const routes = (
       </Route>
       <Route path="/login">
         <Login />
+      </Route>
+      <Route path="/bad-components">
+        <BadComponents />
       </Route>
       <Route path="*">
         <PageNotFound />

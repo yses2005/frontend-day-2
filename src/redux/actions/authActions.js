@@ -1,7 +1,7 @@
 import { auth } from "constants/ActionTypes";
 
 export function login() {
-  return (dispatch) => {
+  return async (dispatch) => {
     dispatch({
       type: auth.LOGIN_PENDING,
     });

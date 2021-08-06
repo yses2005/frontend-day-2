@@ -1,14 +1,17 @@
-import { Link } from "react-router-dom";
-
-import { FullscreenWrapper } from "components";
-import useNewDocumentTitle from "hooks/useNewDocumentTitle";
+import { FullscreenWrapper, CustomLink } from "components";
 
 function Home() {
-  useNewDocumentTitle("Home");
+  const userName = null;
 
   return (
     <FullscreenWrapper>
-      Home <Link to="/login">Login</Link>
+      <h1>Doggo List</h1>
+      <p className="m-bottom-4">
+        {userName
+          ? `Welcome, ${userName}!`
+          : "To see a list of doggos, please log in first."}
+      </p>
+      <CustomLink to="login" label="Log In" />
     </FullscreenWrapper>
   );
 }
